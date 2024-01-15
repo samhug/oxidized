@@ -35,7 +35,7 @@ class AOSW < Oxidized::Model
     cfg.gsub!(/key (\S+)$/, 'key <secret removed>')
     cfg.gsub!(/wpa-passphrase (\S+)$/, 'wpa-passphrase <secret removed>')
     cfg.gsub!(/bkup-passwords (\S+)$/, 'bkup-passwords <secret removed>')
-    cfg.gsub!(/user (\S+) (\S+) (\S+)$/, 'user \1 <secret removed> \3')
+    cfg.gsub!(/user (\S+) (\S+)/, 'user \1 <secret removed>')
     cfg.gsub!(/virtual-controller-key (\S+)$/, 'virtual-controller-key <secret removed>')
     cfg
   end
